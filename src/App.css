@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-background: #f0f0f0;
+  --trans-dur: 0.6s;
+  --trans-timing: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+
+  body {
+    background-color: hsl(var(--hue), 10%, 90%);
+    color: hsl(var(--hue), 10%, 10%);
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    transition: background-color var(--trans-dur) var(--trans-timing),
+    color var(--trans-dur) var(--trans-timing);
+  }
+
+
+
+
+body.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --header-background: #2c2c2c;
+}
+
+.toggle-dark-mode button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* header {
+  display: flex;
+  background-color: #4472c4;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+} */
+/* header {
+  background-color: var(--header-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color var(--trans-dur) var(--trans-timing);
+  background-color: #4472c4;
+  width: 100vw;
+} */
+
+
+/* header */
+header {
+  display: flex;
+  background-color: #4472c4;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+header > p {
+  padding: 20px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* App container */
+.app {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  gap: 10px;
+}
+
+/* City list styles */
+.city-list {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid grey;
+  padding: 20px;
+  height: 600px;
+}
+
+.city-list h1 {
+  color: #4472c4;
+}
+
+.city-list input[type="text"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  height: 35px;
+  width: 100%;
+}
+.city-list-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.city-list button {
+  background-color: #4472c4;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 48%;
+  font-weight: 600;
+}
+.city-list-buttons button {
+  background-color: rgb(5, 141, 8);
+}
+
+.city-list button:hover {
+  background-color: rgb(3, 101, 5);
+}
+
+/* Details styles */
+.details {
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid grey;
+  padding: 20px;
+  height: 600px;
+}
+
+.details h1 {
+  color: #4472c4;
+}
+
+.details input[type="text"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  height: 35px;
+}
+
+.details button {
+  background-color: #4472c4;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+#deleteBtn {
+  background-color: red;
+}
+
+.details button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+th,
+td,
+tr {
+  padding: 8px;
+  border: 1px solid grey;
+}
+
+th {
+  background-color: #4472c4;
+  color: #ffffff;
+  border: 1px solid grey;
+}
+
+.highlighted {
+  background-color: rgb(243, 166, 24);
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .modal-content {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode th {
+  background-color: #555;
+}
+
+.dark-mode .selected {
+  background-color: #555;
+}
+
+.dark-mode .highlighted {
+  background-color: #ff7f50;
+}
+
+.toggle-dark-mode button {
+  background-color: transparent;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* errorMessage style */
+.error-message {
+  font-weight: 600;
+  color: red;
+  text-align: center;
+}
+
+/* Media Queries for Tablet and Small Devices */
+@media only screen and (min-width: 320px) and (max-width: 900px) {
+  .app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .city-list {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .details {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+}
