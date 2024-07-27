@@ -24,8 +24,6 @@
   }
 
 
-
-
 body.dark-mode {
   --background-color: #1a1a1a;
   --text-color: #ffffff;
@@ -38,22 +36,6 @@ body.dark-mode {
   cursor: pointer;
 }
 
-/* header {
-  display: flex;
-  background-color: #4472c4;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-} */
-/* header {
-  background-color: var(--header-background);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color var(--trans-dur) var(--trans-timing);
-  background-color: #4472c4;
-  width: 100vw;
-} */
 
 
 /* header */
@@ -196,11 +178,11 @@ th {
 }
 
 .dark-mode th {
-  background-color: #555;
+  background-color: #0056b3;
 }
 
 .dark-mode .selected {
-  background-color: #555;
+  background-color: #0056b3;
 }
 
 .dark-mode .highlighted {
